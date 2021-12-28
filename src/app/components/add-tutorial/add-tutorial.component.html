@@ -1,0 +1,207 @@
+<div class="black">
+  <div class="col-md-12">
+    <div class="row d-flex justify-content-center ">
+      <div class="col-md-12">
+      <STYLE>A {text-decoration: none;} </STYLE>
+            <h1 class="text-center mb-3 text-dark"><a routerLink='/home'>KASBUM</a></h1>
+            </div>
+          <h2 class="text-center mb-3">CRIE AQUI SEU CURRICULO</h2>  
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12">
+    <div class="submit-form">
+      <div class="col-md-6">
+        <br>
+        <p>Dados Pessoais</p>
+        </div>
+      <div *ngIf="!submitted">
+        <div class="input-group mb-3">         
+          <div class="col-md-6">
+            <label for="name" class="form-label">Nome</label>
+            <input 
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="tutorial.name"
+            name="name">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="sobrename" class="form-label" >Sobrenome</label>
+            <input 
+            class="form-control"
+            id="sobrename"
+            required
+            [(ngModel)]="tutorial.sobrename"
+            name="sobrename">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <label for="description" class="form-label">Resumo Profissional</label>
+          <textarea 
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="tutorial.description"
+          name="description"
+          rows="3"></textarea>
+        </div>
+
+        <div class="input-group mb-3 mt-3">         
+          <div class="col-md-4">
+            <label for="city" class="form-label">Cidade</label>
+            <input 
+            class="form-control"
+            id="city"
+            required
+            [(ngModel)]="tutorial.city"
+            name="city">
+          </div>
+          
+          <div class="col-md-4">
+            <label for="state" class="form-label">Sobrenome</label>
+            <input 
+            class="form-control"
+            id="state"
+            required
+            [(ngModel)]="tutorial.state"
+            name="state">
+          </div>
+
+          <div class="col-md-2">
+            <label for="telResidencia" class="form-label">Telefone Residencial</label>
+            <input 
+            class="form-control"
+            id="telResidencia"
+            required
+            [(ngModel)]="tutorial.telResidencia"
+            name="telResidencia">
+          </div>
+
+          <div class="col-md-2">
+            <label for="telCelular" class="form-label">Celular</label>
+            <input 
+            class="form-control"
+            id="telCelular"
+            required
+            [(ngModel)]="tutorial.telCelular"
+            name="telCelular">
+          </div>
+        </div>
+
+        <div class="input-group mb-3 mt-3">         
+          <div class="col-md-6">
+            <label for="portifolio" class="form-label">Portifólio Link</label>
+            <input 
+            class="form-control"
+            id="portifolio"
+            required
+            [(ngModel)]="tutorial.portifolio"
+            name="portifolio">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="email" class="form-label">E-mail</label>
+            <input 
+            class="form-control"
+            id="email"
+            required
+            [(ngModel)]="tutorial.email"
+            name="email">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+        <p>Histórico Profissional</p>
+        </div>
+
+        <div class="input-group mb-3 mt-3">         
+          <div class="col-md-6">
+            <label for="jobEmpresa" class="form-label">Empresa</label>
+            <input 
+            class="form-control"
+            id="jobEmpresa"
+            required
+            [(ngModel)]="tutorial.jobEmpresa"
+            name="jobEmpresa">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="jobFuncao" class="form-label">Função</label>
+            <input 
+            class="form-control"
+            id="jobFuncao"
+            required
+            [(ngModel)]="tutorial.jobFuncao"
+            name="jobFuncao">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <label for="jobDescricao" class="form-label">Descrição</label>
+          <textarea 
+          class="form-control"
+          id="jobDescricao"
+          required
+          [(ngModel)]="tutorial.jobDescricao"
+          name="jobDescricao"
+          rows="3"></textarea>
+        </div>
+
+        <div class="col-md-6">
+          <p>Histórico Escolar</p>
+          </div>
+          
+          <div class="input-group mb-3 mt-3">         
+            <div class="col-md-6">
+              <label for="schoolName" class="form-label">Nome Instituição</label>
+              <input 
+              class="form-control"
+              id="schoolName"
+              required
+              [(ngModel)]="tutorial.schoolName"
+              name="schoolName">
+            </div>
+            
+            <div class="col-md-6">
+              <label for="schoolData" class="form-label">Carga Horária</label>
+              <input 
+              class="form-control"
+              id="schoolData"
+              required
+              [(ngModel)]="tutorial.schoolData"
+              name="jobFuncao" >
+            </div>
+          </div>
+  
+          <div class="col-md-12">
+            <label for="schoolDescricao" class="form-label">Descrição</label>
+            <textarea 
+            class="form-control"
+            id="schoolDescricao"
+            required
+            [(ngModel)]="tutorial.schoolDescricao"
+            name="schoolDescricao"
+            rows="3"></textarea>
+          </div>
+
+          <div class="input-group mb-3 mt-3">
+          <div class="col-md-6 mt-3">
+            <button  class="btn btn-outline-info form-control" routerLink='/inicio'>Cancelar</button>
+          </div>
+
+          <div class="col-md-6 mt-3">
+            <button (click)="saveTutorial()" class="btn btn-info form-control">Cadastrar</button>
+          </div>        
+        </div>
+        <br>
+      </div>   
+    </div>
+  </div>
+</div>
+</div>
+</div>

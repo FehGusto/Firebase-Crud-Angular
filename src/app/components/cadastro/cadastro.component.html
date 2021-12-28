@@ -1,0 +1,35 @@
+<div class="container mt-3">
+    <div class="row d-flex align-items-center">
+        <div class="col-md-12">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+                    <STYLE>A {text-decoration: none;} </STYLE>
+                    <h1 class="text-center mb-3 text-dark"><a routerLink='/home'>KASBUM</a></h1>
+                    <h2 class="text-center mb-3 text-dark">SEU CURRICULO EM MÃOS</h2>                   
+
+                    <div class="form-group">
+                        <label for="usuario">E-mail</label>
+                        <input #emailSignup class="form-control" type="text" name="usuario" id="usuario"
+                            placeholder="Digite o Usuário">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Comfirmar Senha</label>
+                        <input #passwordSignup class="form-control" type="password" name="senha" id="senha"
+                            placeholder="Comfirme a Senha">
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-info form-control" (click)="onSignup(emailSignup.value,passwordSignup.value)" >Cadastrar</button>
+                    </div>
+
+                    <hr class="mt-5 mb-5">
+
+                    <p class="text-center">
+                     Já faz parte da rede KasBum? <a routerLink='/login'>Faça Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

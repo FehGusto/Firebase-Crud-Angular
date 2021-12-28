@@ -1,0 +1,24 @@
+.submit-form {
+  background-color: white;
+}
+
+p {
+  font-size: 25px;
+  padding-top: 1cm;
+
+}
+
+.black{
+  background-color: rgb(0, 0, 0);
+  padding-top: 1cm;
+  padding-bottom: 4cm;
+}
+h1 {
+  color: rgb(0, 191, 255);
+  font-size: 95px;
+}
+
+h2{
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
